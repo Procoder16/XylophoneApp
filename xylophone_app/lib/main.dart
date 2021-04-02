@@ -9,16 +9,55 @@ class XylophoneApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: SafeArea(
-          child: Container(
-            child: Center(
-              child: FlatButton(
-                color: Colors.blueGrey[600],
-                child: Text('Click Me!!!'),
-                onPressed: () {
-                  final player = AudioCache();
-                  player.play('note1.wav');
-                },
-              ),
+          child: SafeArea(
+            child: Column(
+              children: [
+                FlatButton(
+                  color: Colors.red,
+                  onPressed: () {
+                    final player = AudioCache();
+                    player.play('note1.wav');
+                  },
+                ),
+                FlatButton(
+                  color: Colors.orange,
+                  onPressed: () {
+                    final player = AudioCache();
+                    player.play('note2.wav');
+                  },
+                ),
+                FlatButton(
+                  color: Colors.yellow,
+                  onPressed: () {
+                    final player = AudioCache();
+                    player.play('note3.wav');
+                  },
+                ),
+                FlatButton(
+                    color: Colors.green[700],
+                    onPressed: () {
+                      final player = AudioCache();
+                      player.play('note4.wav');
+                    }),
+                FlatButton(
+                    color: Colors.green[900],
+                    onPressed: () {
+                      final player = AudioCache();
+                      player.play('note5.wav');
+                    }),
+                FlatButton(
+                    color: Colors.blue[800],
+                    onPressed: () {
+                      final player = AudioCache();
+                      player.play('note6.wav');
+                    }),
+                FlatButton(
+                    color: Colors.purple,
+                    onPressed: () {
+                      final player = AudioCache();
+                      player.play('note7.wav');
+                    }),
+              ],
             ),
           ),
         ),
