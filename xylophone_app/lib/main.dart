@@ -5,57 +5,57 @@ void main() => runApp(XylophoneApp());
 
 class XylophoneApp extends StatelessWidget {
   @override
+  void playSound(int noteNumber) {
+    final player = AudioCache();
+    player.play('note$noteNumber.wav');
+  }
+
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         body: SafeArea(
           child: SafeArea(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 FlatButton(
                   color: Colors.red,
                   onPressed: () {
-                    final player = AudioCache();
-                    player.play('note1.wav');
+                    playSound(1);
                   },
                 ),
                 FlatButton(
                   color: Colors.orange,
                   onPressed: () {
-                    final player = AudioCache();
-                    player.play('note2.wav');
+                    playSound(2);
                   },
                 ),
                 FlatButton(
                   color: Colors.yellow,
                   onPressed: () {
-                    final player = AudioCache();
-                    player.play('note3.wav');
+                    playSound(3);
                   },
                 ),
                 FlatButton(
                     color: Colors.green[700],
                     onPressed: () {
-                      final player = AudioCache();
-                      player.play('note4.wav');
+                      playSound(4);
                     }),
                 FlatButton(
                     color: Colors.green[900],
                     onPressed: () {
-                      final player = AudioCache();
-                      player.play('note5.wav');
+                      playSound(5);
                     }),
                 FlatButton(
                     color: Colors.blue[800],
                     onPressed: () {
-                      final player = AudioCache();
-                      player.play('note6.wav');
+                      playSound(6);
                     }),
                 FlatButton(
                     color: Colors.purple,
                     onPressed: () {
-                      final player = AudioCache();
-                      player.play('note7.wav');
+                      playSound(7);
                     }),
               ],
             ),
